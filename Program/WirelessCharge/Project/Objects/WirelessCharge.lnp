@@ -1,0 +1,15 @@
+--cpu Cortex-M0
+".\objects\startup_gvm32f030.o"
+".\objects\system_gvm32f030.o"
+".\objects\main.o"
+".\objects\control.o"
+".\objects\bsp.o"
+".\objects\led.o"
+".\objects\uart.o"
+".\objects\systick.o"
+".\objects\magneticfield.o"
+".\objects\qi.o"
+--library_type=microlib --strict --scatter ".\Objects\WirelessCharge.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\WirelessCharge.map" -o .\Objects\WirelessCharge.axf
