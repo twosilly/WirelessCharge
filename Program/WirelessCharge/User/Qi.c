@@ -30,7 +30,7 @@
 
 
 QiStatus_TypeDef  QiStatus;
-
+struct QiConfig_Struct QiConfig;
 
 uint8_t Get_MessageSize(uint8_t Header)
 {

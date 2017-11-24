@@ -174,9 +174,9 @@ ARM Macro Assembler    Page 3
 ]
   101 00000000                 IMPORT           SystemInit
   102 00000000                 IMPORT           __main
-  103 00000000 4804            LDR              R0, =SystemInit
+  103 00000000 4807            LDR              R0, =SystemInit
   104 00000002 4780            BLX              R0
-  105 00000004 4804            LDR              R0, =__main
+  105 00000004 4807            LDR              R0, =__main
   106 00000006 4700            BX               R0
   107 00000008                 ENDP
   108 00000008         
@@ -298,24 +298,41 @@ ARM Macro Assembler    Page 5
   182 00000014         ; User Initial Stack & Heap
   183 00000014         
   184 00000014                 IF               :DEF:__MICROLIB
-  185 00000014         
-  186 00000014                 EXPORT           __initial_sp
-  187 00000014                 EXPORT           __heap_base
-  188 00000014                 EXPORT           __heap_limit
-  189 00000014         
-  190 00000014                 ELSE
-  204                          ENDIF
-  205 00000014         
-  206 00000014         
-  207 00000014                 END
+  191 00000014         
+  192 00000014                 IMPORT           __use_two_region_memory
+  193 00000014                 EXPORT           __user_initial_stackheap
+  194 00000014         __user_initial_stackheap
+  195 00000014         
+  196 00000014 4804            LDR              R0, =  Heap_Mem
+  197 00000016 4905            LDR              R1, =(Stack_Mem + Stack_Size)
+  198 00000018 4A05            LDR              R2, = (Heap_Mem +  Heap_Size)
+  199 0000001A 4B06            LDR              R3, = Stack_Mem
+  200 0000001C 4770            BX               LR
+  201 0000001E         
+  202 0000001E 00 00           ALIGN
+  203 00000020         
+  204 00000020                 ENDIF
+  205 00000020         
+  206 00000020         
+  207 00000020                 END
               00000000 
+              00000000 
+              00000000 
+              00000200 
+              00000100 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\objects\startup_gvm32f030.d -o.\objects\startup_gvm32f030.o -I.\
+
+
+
+ARM Macro Assembler    Page 6 
+
+
 RTE\_Target_1 -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include -
-ID:\Keil_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UV
-ISION_VERSION SETA 523" --predefine="ARMCM0 SETA 1" --list=.\listings\startup_g
-vm32f030.lst ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup_gvm32f030.s
+ID:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 523" --predef
+ine="ARMCM0 SETA 1" --list=.\listings\startup_gvm32f030.lst ..\Libraries\CMSIS\
+Device\GV\gvm32f030\startup\startup_gvm32f030.s
 
 
 
@@ -338,8 +355,11 @@ Symbol: Stack_Mem
       At line 12 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
    Uses
-      None
-Comment: Stack_Mem unused
+      At line 197 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+      At line 199 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+
 __initial_sp 00000200
 
 Symbol: __initial_sp
@@ -349,9 +369,7 @@ _gvm32f030.s
    Uses
       At line 39 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
-      At line 186 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
-p_gvm32f030.s
-
+Comment: __initial_sp used once
 3 symbols
 
 
@@ -375,8 +393,11 @@ Symbol: Heap_Mem
       At line 24 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
    Uses
-      None
-Comment: Heap_Mem unused
+      At line 196 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+      At line 198 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+
 __heap_base 00000000
 
 Symbol: __heap_base
@@ -384,9 +405,8 @@ Symbol: __heap_base
       At line 23 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
    Uses
-      At line 187 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
-p_gvm32f030.s
-Comment: __heap_base used once
+      None
+Comment: __heap_base unused
 __heap_limit 00000100
 
 Symbol: __heap_limit
@@ -394,9 +414,8 @@ Symbol: __heap_limit
       At line 25 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
    Uses
-      At line 188 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
-p_gvm32f030.s
-Comment: __heap_limit used once
+      None
+Comment: __heap_limit unused
 4 symbols
 
 
@@ -782,7 +801,17 @@ _gvm32f030.s
       At line 136 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
 p_gvm32f030.s
 
-26 symbols
+__user_initial_stackheap 00000014
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 194 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+   Uses
+      At line 193 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+Comment: __user_initial_stackheap used once
+27 symbols
 
 
 
@@ -798,7 +827,9 @@ _gvm32f030.s
    Uses
       At line 24 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
-Comment: Heap_Size used once
+      At line 198 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+
 Stack_Size 00000200
 
 Symbol: Stack_Size
@@ -808,7 +839,9 @@ gvm32f030.s
    Uses
       At line 12 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startup
 _gvm32f030.s
-Comment: Stack_Size used once
+      At line 197 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+
 __Vectors_Size 000000C0
 
 Symbol: __Vectors_Size
@@ -846,5 +879,14 @@ p_gvm32f030.s
       At line 105 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
 p_gvm32f030.s
 Comment: __main used once
-2 symbols
-376 symbols in table
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 192 in file ..\Libraries\CMSIS\Device\GV\gvm32f030\startup\startu
+p_gvm32f030.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+3 symbols
+379 symbols in table

@@ -25,22 +25,31 @@ void PWM_Cmd(FunctionalState NewState)
 
 void MagneticField_Init(void)
 {
+  SystemCoreClockUpdate(); 
+	SYSCON->SYSAHBCLKCTRL |= (SYSCON_SYSAHBCLKCTRL_PWMEN | SYSCON_SYSAHBCLKCTRL_GPIOAEN);
+  IOCFG->PA7 = IOCFG_DEFAULT | IOCFG_PA7_FUNC_PWM_OUT1;
+  IOCFG->PA8 = IOCFG_DEFAULT | IOCFG_PA8_FUNC_PWM_OUT0;
+  GPIOA->DIR = GPIOA->DIR | GPIO_PIN_7 | GPIO_PIN_8;
+  
   //互补PWM输出、使能GPIO初始化
   IOCFG->PB5 = IOCFG_DEFAULT;
-  GPIOB->DIR = GPIOA->DIR | GPIO_PIN_5;
+  GPIOB->DIR = GPIOB->DIR | GPIO_PIN_5;
   MagneticField_Disable();
   
   SYSCON->PRESETCTRL &= ~SYSCON_PRESETCTRL_PWM_RST_N;
   SYSCON->PRESETCTRL |= SYSCON_PRESETCTRL_PWM_RST_N;
   
-  PWM->CTRL = (PWM->CTRL & (~PWM_CTRL_PRSC)) | (uint32_t)(0x3 << 5);  //8分频
+  PWM->CTRL = (PWM->CTRL & (~PWM_CTRL_PRSC)) | (uint32_t)(0x0 << 5);  //1分频
   PWM->CNFG = PWM_CNFG_EDG;
   PWM->CNFG &= ~(0x01 << 1);  //互补输出
-  PWM->CMOD = 10000;
   PWM->CTRL |= PWM_CTRL_LDOK;
-  PWM->VAL0 = 5000;
+  PWM->CMOD = 143;  //143  71
+  PWM->VAL0 = 71;
   
-  PWM->DTIM0 = 200; //设置死区
-  PWM->DTIM1 = 0;
-  PWM_Cmd(DISABLE); //关闭输出
+  PWM->DTIM0 = 2;  //设置死区
+  PWM->DTIM1 = 4;
+  PWM_Cmd(ENABLE); //开启输出
+  
+  //MagneticField_Enable();  //调试用
+  printf("Magnetic Field Init Success!\r\n");
 }

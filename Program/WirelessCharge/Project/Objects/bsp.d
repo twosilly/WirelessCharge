@@ -16,4 +16,9 @@
 .\objects\bsp.o: ..\User\Control.h
 .\objects\bsp.o: ..\User\BSP\MagneticField.h
 .\objects\bsp.o: ..\User\Qi.h
+.\objects\bsp.o: ..\User\Decode.h
+.\objects\bsp.o: ..\User\BSP\ADC.h
+.\objects\bsp.o: ..\User\PID.h
 .\objects\bsp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\bsp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\bsp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

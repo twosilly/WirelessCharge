@@ -16,4 +16,9 @@
 .\objects\led.o: ..\User\Control.h
 .\objects\led.o: ..\User\BSP\MagneticField.h
 .\objects\led.o: ..\User\Qi.h
+.\objects\led.o: ..\User\Decode.h
+.\objects\led.o: ..\User\BSP\ADC.h
+.\objects\led.o: ..\User\PID.h
 .\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

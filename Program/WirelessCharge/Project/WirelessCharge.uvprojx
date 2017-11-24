@@ -186,7 +186,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>1</useUlib>
+            <useUlib>0</useUlib>
             <EndSel>1</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
@@ -333,7 +333,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>GVM32F030x8</Define>
+              <Define>GVM32F030x6</Define>
               <Undefine></Undefine>
               <IncludePath>..\Libraries\CMSIS\Device\GV\gvm32f030;..\Libraries\CMSIS\Include;..\User\BSP;..\User</IncludePath>
             </VariousControls>
@@ -404,6 +404,21 @@
               <FileType>1</FileType>
               <FilePath>..\User\Control.c</FilePath>
             </File>
+            <File>
+              <FileName>Decode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Decode.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>Zhuhc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Zhuhc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -438,6 +453,11 @@
               <FileName>Qi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Qi.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\BSP\ADC.c</FilePath>
             </File>
           </Files>
         </Group>

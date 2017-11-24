@@ -187,12 +187,27 @@ typedef enum
   Select                         = 0,
   Ping                           = 1,
   IdentificationAndConfiguration = 2,
-  PowerTransfer                  = 4,
+  PowerTransfer                  = 3,
 } QiStatus_TypeDef;
 
-
+struct QiConfig_Struct
+{
+  unsigned char PowerClass;
+  unsigned char MaximumPowerValue;
+  unsigned char Reserved1;
+  unsigned char Prop;
+  unsigned char Reserved2;
+  unsigned char Count;
+  unsigned char WindowSize;
+  unsigned char WindowOffset;
+  unsigned char Neg;
+  unsigned char Polarity;
+  unsigned char Depth;
+  unsigned char Reserved3;
+};
 
 extern QiStatus_TypeDef  QiStatus;
+extern struct QiConfig_Struct QiConfig;
 
 uint8_t Get_MessageSize(uint8_t Header);
 
