@@ -17,6 +17,8 @@
 #define Time_ControlSettling_Target (5000)     //5ms
 #define Time_ReceivedPower_Target   (23000000) //23S
 
+extern volatile uint32_t LEDControlTime;
+
 void QiControl(void);
 
 #endif

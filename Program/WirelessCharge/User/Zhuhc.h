@@ -12,6 +12,7 @@
 #include "Decode.h"
 #include "ADC.h"
 #include "PID.h"
+#include "QC.h"
 
 #include <stdio.h>
 #include <stdbool.h>

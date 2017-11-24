@@ -5,18 +5,26 @@ bool revDone = false;
 unsigned char rightData[30] = {0}, rightLength = 0;
 unsigned char rightDone = 0, startData = 0;
 
+unsigned long I_Sense_Count = 0;
+
 void Decode_Init(void)
 {
   IOCFG->PA5 = IOCFG_DEFAULT;// | IOCFG_SMODE;
   GPIOA->DIR = GPIOA->DIR & (~GPIO_PIN_5);
   //SYSCON->IOCONFIGCLKDIV0 = 2500;
+  IOCFG->PA1 = IOCFG_DEFAULT;
+  GPIOA->DIR = GPIOA->DIR & (~GPIO_PIN_1);
   
   GPIOA->IS  &= ~GPIO_PIN_5;
   GPIOA->IBE |= GPIO_PIN_5;
   
+  GPIOA->IS  &= ~GPIO_PIN_1;
+  GPIOA->IBE |= GPIO_PIN_1;
+  
   NVIC_SetPriority(GPIOA_IRQn, 0);
 	NVIC_EnableIRQ(GPIOA_IRQn);	
   GPIOA->IE &= ~GPIO_PIN_5;
+  GPIOA->IE &= ~GPIO_PIN_1;
   
   SYSCON->PRESETCTRL &= ~SYSCON_PRESETCTRL_TIM0_RST_N;
   SYSCON->PRESETCTRL |= SYSCON_PRESETCTRL_TIM0_RST_N;
@@ -119,6 +127,13 @@ static unsigned char startFlag = 0, startFlag1 = 0;
 
 void GPIOA_IRQHandler(void)
 {
+  if(GPIOA->MIS & GPIO_PIN_1)
+  {
+    GPIOA->IC = GPIO_PIN_1;
+    I_Sense_Count++;
+    return;
+  }
+  
   GPIOA->IC = GPIO_PIN_5;
   
   if(Status == 0) //同步

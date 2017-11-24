@@ -1,6 +1,6 @@
 #include "Control.h"
 
-#define CheckObject_Value       (0x040)
+#define CheckObject_Value       (0x020)
 #define PoweTransferr_Value     (0x180)
 /*
  * Selection阶段:
@@ -8,40 +8,55 @@
  *     如果它支持自由定位，它应该尝试定位这些对象。此外，功率发送器可以尝试区分功率接收器和异物，
  *     如钥匙、硬币等。此外，功率发送器应尝试选择用于功率传输的功率接收器。
  */
-volatile uint32_t SelectTime = 0, PingTime = 0, IAndCTime = 0, RealTimeCheckTime = 0;
+volatile uint32_t SelectTime = 0, PingTime = 0, IAndCTime = 0, RealTimeCheckTime = 0, LEDControlTime = 0;
 volatile uint32_t PowerTransferTime_Error = 0, PowerTransferTime_Power = 0, ADConvertTime = 0;
-
+volatile uint32_t VoltageCheckTime = 0;
+  
 unsigned char ErrorCode = 0;
 bool isEndPowerTransfer = false;
 unsigned char Identification_Count = 0;
+
+bool isLowVoltage = false;
+
 void SelectControl(void)
 {
-  if(micros() - SelectTime > 400000)  //400ms
+  if(micros() - SelectTime > 500000)  //500ms
   {
     SelectTime = micros();
     
+    I_Sense_Count = 0;
+    GPIOA->IE |= GPIO_PIN_1; //开启中断
     MagneticField_Enable();
-    Delay_ms(1);
-    Get_AllAdc();
-    if(AD_I_OUT > CheckObject_Value)
+    Delay_ms(10);
+    if(I_Sense_Count >= 2)
     {
-      Delay_ms(5);
-      Get_AllAdc();
-      if(AD_I_OUT > CheckObject_Value)
-      {
-        Delay_ms(5);
-        Get_AllAdc();
-        if(AD_I_OUT > CheckObject_Value)
-        {
-          QiStatus = Ping;
-          PingTime = micros();
-          MagneticField_Disable();
-          GPIOA->IE |= GPIO_PIN_5;
-          LED3(LED_ON);
-        }
-      }
+      QiStatus = Ping;
+      PingTime = micros();
+      MagneticField_Disable();
+      GPIOA->IE |= GPIO_PIN_5;
+      GPIOA->IE &= ~GPIO_PIN_1;
     }
+    I_Sense_Count = 0;
     MagneticField_Disable();
+//    Get_AllAdc();
+//    if(AD_I_OUT > CheckObject_Value)
+//    {
+//      Delay_ms(5);
+//      Get_AllAdc();
+//      if(AD_I_OUT > CheckObject_Value)
+//      {
+//        Delay_ms(5);
+//        Get_AllAdc();
+//        if(AD_I_OUT > CheckObject_Value)
+//        {
+//          QiStatus = Ping;
+//          PingTime = micros();
+//          MagneticField_Disable();
+//          GPIOA->IE |= GPIO_PIN_5;
+//          //LED3(LED_ON);
+//        }
+//      }
+//    }
   }
   else
   {
@@ -87,9 +102,9 @@ void PingControl(void)
   }
   else
   { 
-    LED1(LED_ON);
-    LED2(LED_OFF);
-    LED3(LED_OFF);
+    //LED1(LED_ON);
+    //LED2(LED_OFF);
+    //LED3(LED_OFF);
     MagneticField_Disable();
     QiStatus = Select;
     SelectTime = micros();
@@ -177,17 +192,17 @@ void ConfigControl(void)
           PID.Frequency = 175000;
           PWM->CMOD = 143; 
           PWM->VAL0 = 71;
-          LED1(LED_OFF);
-          LED2(LED_ON);
-          LED3(LED_ON);
+          //LED1(LED_OFF);
+          //LED2(LED_ON);
+          //LED3(LED_ON);
         }
         else
         {
           printf("Config Error!\r\n");
           Identification_Count = 0;
-          LED1(LED_ON);
-          LED2(LED_OFF);
-          LED3(LED_OFF);
+          //LED1(LED_ON);
+          //LED2(LED_OFF);
+          //LED3(LED_OFF);
           MagneticField_Disable();
           QiStatus = Select;
           SelectTime = micros();
@@ -197,9 +212,9 @@ void ConfigControl(void)
       if(Identification_Count > 7)
       {
         Identification_Count = 0;
-        LED1(LED_ON);
-        LED2(LED_OFF);
-        LED3(LED_OFF);
+        //LED1(LED_ON);
+        //LED2(LED_OFF);
+        //LED3(LED_OFF);
         MagneticField_Disable();
         QiStatus = Select;
         SelectTime = micros();
@@ -211,9 +226,9 @@ void ConfigControl(void)
   else
   {
     Identification_Count = 0;
-    LED1(LED_ON);
-    LED2(LED_OFF);
-    LED3(LED_OFF);
+    //LED1(LED_ON);
+    //LED2(LED_OFF);
+    //LED3(LED_OFF);
     MagneticField_Disable();
     QiStatus = Select;
     SelectTime = micros();
@@ -236,9 +251,9 @@ void PowerTransferControl(void)
   if(micros() - PowerTransferTime_Error < Time_ControlActive_Target)
   {
     //PID控制
+    //if((micros() - PowerTransferTime_Error > PID.TimeControl) && !isLowVoltage)
     if(micros() - PowerTransferTime_Error > PID.TimeControl)
     {
-      
       PID.TimeControl += PID.TimeInner * 1000 * 1000;
       PID.PIDCount++;
       
@@ -288,9 +303,9 @@ void PowerTransferControl(void)
   else
   {
     printf("Error Overtime!\r\n");
-    LED1(LED_ON);
-    LED2(LED_OFF);
-    LED3(LED_OFF);
+    //LED1(LED_ON);
+    //LED2(LED_OFF);
+    //LED3(LED_OFF);
     MagneticField_Disable();
     QiStatus = Select;
     SelectTime = micros();
@@ -315,9 +330,9 @@ void PowerTransferControl(void)
   else
   {
     printf("Power Overtime!\r\n");
-    LED1(LED_ON);
-    LED2(LED_OFF);
-    LED3(LED_OFF);
+    //LED1(LED_ON);
+    //LED2(LED_OFF);
+    //LED3(LED_OFF);
     MagneticField_Disable();
     QiStatus = Select;
     SelectTime = micros();
@@ -329,19 +344,25 @@ void PowerTransferControl(void)
 
 void AD_Convert(void)
 {
-  static unsigned long AD_I_OUT_SUM = 0;
+  static unsigned long AD_I_OUT_SUM = 0, AD_S_OVP_SUM, AD_V_IN_SUM;
   static unsigned char AD_Count = 0;
   if(micros() - ADConvertTime > 1000) 
   {
     ADConvertTime = micros();
     Get_AllAdc();
     AD_I_OUT_SUM += AD_I_OUT;
+    AD_S_OVP_SUM += AD_S_OVP;
+    AD_V_IN_SUM  += AD_V_IN;
     AD_Count++;
     if(AD_Count >= 5)
     {
       AD_I_OUT_Average = AD_I_OUT_SUM / 5;
+      AD_S_OVP_Average = AD_S_OVP_SUM / 5;
+      AD_V_IN_Average  = AD_V_IN_SUM  / 5;
       AD_Count = 0;
       AD_I_OUT_SUM = 0;
+      AD_S_OVP_SUM = 0;
+      AD_V_IN_SUM  = 0;
     }
   }
 }
@@ -386,10 +407,75 @@ void RealTimeCheck(void)
   }
 }
 
+void Voltage_Check(void)
+{
+  if(micros() - VoltageCheckTime > 30000)  //30ms
+  {
+    VoltageCheckTime = micros();
+    //printf("%d\r\n", AD_S_OVP_Average);
+    if(AD_V_IN_Average < VIN_4V5_AD_VALUE)
+      isLowVoltage = true;
+    else
+      isLowVoltage = false;
+  }
+}
+
+void LED_Control(void)
+{
+  static int LEDCount = 0; 
+  if(micros() - LEDControlTime > 10000)  //10ms
+  {
+    LEDControlTime = micros();
+    LEDCount++;
+    
+    if(QiStatus == Select)
+    {
+      LED1(LED_ON);   //绿
+      LED2(LED_OFF);  //红
+      LED3(LED_OFF);
+    }
+    else if(QiStatus == Ping)
+    {
+      LED1(LED_ON);
+      LED2(LED_OFF);
+      LED3(LED_ON);
+    }
+    else if(QiStatus == IdentificationAndConfiguration)
+    {
+      LED1(LED_ON);
+      LED2(LED_OFF);
+      LED3(LED_ON);
+    }
+    else if(QiStatus == PowerTransfer)
+    {
+      if(AD_V_IN_Average < VIN_9V_AD_VALUE)
+        LED1(LED_OFF);
+      else
+        LED1(LED_ON);
+      LED2(LED_ON);
+      if(isLowVoltage)
+      {
+        if(LEDCount % 100 < 50)
+          LED3(LED_ON);
+        else
+          LED3(LED_OFF);;
+      }
+      else
+      {
+        LED3(LED_ON);
+      }
+      
+     // printf("%d\r\n", AD_V_IN_Average);
+    }
+  }
+}
+
 void QiControl(void)
 {
   SelectTime = micros();
   RealTimeCheckTime = micros();
+  LEDControlTime = micros();
+  VoltageCheckTime = micros();
   while(1)
   {
     if(QiStatus == Select)
@@ -411,6 +497,8 @@ void QiControl(void)
     
     AD_Convert();
     Decode();
+    LED_Control();
+    Voltage_Check();
     //RealTimeCheck();
   }
 }

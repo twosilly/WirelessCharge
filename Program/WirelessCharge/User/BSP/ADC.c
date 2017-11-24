@@ -7,6 +7,8 @@ unsigned short AD_TEMP    = 0;
 unsigned short AD_S_OVP   = 0;
 
 unsigned short AD_I_OUT_Average = 0;
+unsigned short AD_S_OVP_Average = 0;
+unsigned short AD_V_IN_Average = 0;
 
 void ADC_Init(void)
 {

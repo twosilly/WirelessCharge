@@ -19,6 +19,7 @@
 .\objects\magneticfield.o: ..\User\Decode.h
 .\objects\magneticfield.o: ..\User\BSP\ADC.h
 .\objects\magneticfield.o: ..\User\PID.h
+.\objects\magneticfield.o: ..\User\BSP\QC.h
 .\objects\magneticfield.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\magneticfield.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\magneticfield.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

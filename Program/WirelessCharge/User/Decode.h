@@ -9,6 +9,7 @@ void Decode(void);
 
 extern unsigned char rightData[30], rightLength;
 extern unsigned char rightDone, startData;
+extern unsigned long I_Sense_Count;
 
 #endif
 

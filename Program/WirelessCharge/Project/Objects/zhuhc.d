@@ -18,6 +18,7 @@
 .\objects\zhuhc.o: ..\User\Decode.h
 .\objects\zhuhc.o: ..\User\BSP\ADC.h
 .\objects\zhuhc.o: ..\User\PID.h
+.\objects\zhuhc.o: ..\User\BSP\QC.h
 .\objects\zhuhc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\zhuhc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\zhuhc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

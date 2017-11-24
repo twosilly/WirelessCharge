@@ -12,6 +12,7 @@
 #define LED3(a) do{if(a) GPIOA->CLR = GPIO_PIN_15; else GPIOA->SET = GPIO_PIN_15;} while(0)
 
 void LED_Init(void);
+void Power_Up(void);
 
 #endif
 

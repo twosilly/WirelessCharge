@@ -19,6 +19,7 @@
 .\objects\adc.o: ..\User\Decode.h
 .\objects\adc.o: ..\User\BSP\ADC.h
 .\objects\adc.o: ..\User\PID.h
+.\objects\adc.o: ..\User\BSP\QC.h
 .\objects\adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\adc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

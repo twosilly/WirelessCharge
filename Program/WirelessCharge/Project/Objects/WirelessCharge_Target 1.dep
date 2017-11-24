@@ -8,8 +8,8 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-F (..\User\main.c)(0x5A16C5BA)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+F (..\User\main.c)(0x5A17CED7)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -17,22 +17,23 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
+I (..\User\Control.h)(0x5A179415)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
 I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\Control.c)(0x5A177CBA)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\control.o --omf_browse .\objects\control.crf --depend .\objects\control.d)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+F (..\User\Control.c)(0x5A17DA5D)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\control.o --omf_browse .\objects\control.crf --depend .\objects\control.d)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -40,21 +41,22 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
 I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\Decode.c)(0x5A178BDB)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\decode.o --omf_browse .\objects\decode.crf --depend .\objects\decode.d)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+F (..\User\Decode.c)(0x5A17CEAD)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\decode.o --omf_browse .\objects\decode.crf --depend .\objects\decode.d)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -62,21 +64,22 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
+I (..\User\Control.h)(0x5A179415)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\BSP\ADC.h)(0x5A154384)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
 I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 F (..\User\PID.c)(0x5A1788F4)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\pid.o --omf_browse .\objects\pid.crf --depend .\objects\pid.d)
 I (..\User\PID.h)(0x5A16586A)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -84,153 +87,22 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
+I (..\User\Control.h)(0x5A179415)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\Zhuhc.c)(0x5A1534B9)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\zhuhc.o --omf_browse .\objects\zhuhc.crf --depend .\objects\zhuhc.d)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\BSP.c)(0x5A177B77)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\LED.c)(0x5A151006)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\UART.c)(0x5A177D90)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\SysTick.c)(0x5A0D5249)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
-I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\MagneticField.c)(0x5A1786BE)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\magneticfield.o --omf_browse .\objects\magneticfield.crf --depend .\objects\magneticfield.d)
-I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Zhuhc.h)(0x5A1534B7)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
-I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
-I (..\User\BSP\BSP.h)(0x5A0D47BF)
-I (..\User\BSP\UART.h)(0x5A0D4965)
-I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
-I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\PID.h)(0x5A16586A)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\BSP\QC.h)(0x5A1796C2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
 F (..\User\Qi.c)(0x5A14E0C3)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\qi.o --omf_browse .\objects\qi.crf --depend .\objects\qi.d)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -238,21 +110,21 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
+I (..\User\Control.h)(0x5A179415)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
-I (..\User\Decode.h)(0x5A141554)
-I (..\User\BSP\ADC.h)(0x5A154384)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
 I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-F (..\User\BSP\ADC.c)(0x5A154358)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
-I (..\User\BSP\ADC.h)(0x5A154384)
-I (..\User\Zhuhc.h)(0x5A1534B7)
+F (..\User\Zhuhc.c)(0x5A1534B9)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\zhuhc.o --omf_browse .\objects\zhuhc.crf --depend .\objects\zhuhc.d)
+I (..\User\Zhuhc.h)(0x5A178FBF)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -260,14 +132,177 @@ I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
 I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
-I (..\User\BSP\LED.h)(0x5A151094)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
 I (..\User\BSP\BSP.h)(0x5A0D47BF)
 I (..\User\BSP\UART.h)(0x5A0D4965)
 I (..\User\BSP\SysTick.h)(0x5A0D5236)
-I (..\User\Control.h)(0x5A1657FE)
+I (..\User\Control.h)(0x5A179415)
 I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
 I (..\User\Qi.h)(0x5A14E09E)
-I (..\User\Decode.h)(0x5A141554)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\BSP.c)(0x5A17C64D)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\bsp.o --omf_browse .\objects\bsp.crf --depend .\objects\bsp.d)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\LED.c)(0x5A17D8A9)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\UART.c)(0x5A177D90)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\SysTick.c)(0x5A0D5249)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\MagneticField.c)(0x5A17C6DC)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\magneticfield.o --omf_browse .\objects\magneticfield.crf --depend .\objects\magneticfield.d)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\ADC.c)(0x5A17D4F5)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\PID.h)(0x5A16586A)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (..\User\BSP\QC.c)(0x5A17DCA9)(--c99 -c --cpu Cortex-M0 --li -g -O2 --apcs=interwork --split_sections -I ..\Libraries\CMSIS\Device\GV\gvm32f030 -I ..\Libraries\CMSIS\Include -I ..\User\BSP -I ..\User-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.1.0\Device\ARM\ARMCM0\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DARMCM0 -DGVM32F030x6-o .\objects\qc.o --omf_browse .\objects\qc.crf --depend .\objects\qc.d)
+I (..\User\BSP\QC.h)(0x5A1796C2)
+I (..\User\Zhuhc.h)(0x5A178FBF)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\gvm32f030.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cm0.h)(0x59A92742)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\Libraries\CMSIS\Include\core_cmInstr.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Include\core_cmFunc.h)(0x59A92742)
+I (..\Libraries\CMSIS\Device\GV\gvm32f030\system_gvm32f030.h)(0x59A92742)
+I (..\User\BSP\LED.h)(0x5A17D8A9)
+I (..\User\BSP\BSP.h)(0x5A0D47BF)
+I (..\User\BSP\UART.h)(0x5A0D4965)
+I (..\User\BSP\SysTick.h)(0x5A0D5236)
+I (..\User\Control.h)(0x5A179415)
+I (..\User\BSP\MagneticField.h)(0x5A0D5C8D)
+I (..\User\Qi.h)(0x5A14E09E)
+I (..\User\Decode.h)(0x5A17C7EA)
+I (..\User\BSP\ADC.h)(0x5A17D7C5)
 I (..\User\PID.h)(0x5A16586A)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)

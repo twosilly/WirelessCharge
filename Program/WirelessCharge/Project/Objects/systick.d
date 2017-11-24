@@ -19,6 +19,7 @@
 .\objects\systick.o: ..\User\Decode.h
 .\objects\systick.o: ..\User\BSP\ADC.h
 .\objects\systick.o: ..\User\PID.h
+.\objects\systick.o: ..\User\BSP\QC.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

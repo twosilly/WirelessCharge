@@ -5,14 +5,15 @@
 ".\objects\control.o"
 ".\objects\decode.o"
 ".\objects\pid.o"
+".\objects\qi.o"
 ".\objects\zhuhc.o"
 ".\objects\bsp.o"
 ".\objects\led.o"
 ".\objects\uart.o"
 ".\objects\systick.o"
 ".\objects\magneticfield.o"
-".\objects\qi.o"
 ".\objects\adc.o"
+".\objects\qc.o"
 --strict --scatter ".\Objects\WirelessCharge.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
